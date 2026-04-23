@@ -91,6 +91,15 @@ jobs:
 
             cd demo-app
 
+            echo "Installing Docker..."
+            sudo yum install docker -y
+
+            echo "Starting Docker..."
+            sudo systemctl start docker
+
+            echo "Enabling Docker on boot..."
+            sudo systemctl enable docker
+
             echo "Stopping old container..."
             sudo docker rm -f nginx-container || true
 
