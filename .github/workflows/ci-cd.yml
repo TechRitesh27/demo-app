@@ -81,6 +81,9 @@ jobs:
 
             cd /home/ec2-user
 
+            echo "Installing Git"
+            sudo yum install git -y || sudo apt install git -y
+
             rm -rf demo-app
 
             echo "Cloning repo..."
